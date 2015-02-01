@@ -47,3 +47,37 @@ The keyboard contains some code to work using /dev/input, but the rest still nee
 **Why the onscreen Keyboard, does it work with touch screens?**
 
 It's there because I think it looks cool. While it doesn't work with touch screens, it might be possible by making the project respond to mouse/touch input.
+
+Building
+--------
+
+* install openFrameworks:
+
+```
+$ git clone https://github.com/openframeworks/openFrameworks.git # this could take a while
+$ cd openFrameworks
+$ git checkout 0.8.4
+```
+
+install the dependencies of openFramework using the script (for Arch Linux, Debian, Fedora and Ubuntu users)
+```
+$ cd scripts/linux/<your distribution>/
+$ sudo ./install_dependencies.sh
+```
+
+users of other distributions need to install the dependencies themselves.
+
+now do the build:
+```
+$ cd ..
+$ ./compileOF.sh
+```
+* build DEX UI
+
+```
+$ cd ~ # or somewhere else
+$ git clone https://github.com/jayay/dex-ui.git
+$ cd dex-ui
+$ OF_ROOT=~/openFrameworks make -j2 # you should pass the path to openFrameworks here
+```
+That's it! You can run it typing `make run` or `cd bin && ./dex-ui`
