@@ -46,7 +46,7 @@ TimeDisplay::TimeDisplay() {
   
   // Text
   int textDelay = 0;
-  mainTime = newText("SYSTEM SUMMARY", 37,
+  mainTime = newText("SYSTEM SUMMARY", 30,
                      5, 12,
                      20, delay+textDelay-80,
                      COLOR_175,
